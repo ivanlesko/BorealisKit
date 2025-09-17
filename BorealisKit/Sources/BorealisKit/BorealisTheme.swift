@@ -29,7 +29,7 @@ public struct Theme {
     }
 }
 
-public enum BorealisTheme {
+public enum BorealisTheme: CaseIterable {
     case Alaska
     case AlaskaClassic
     case Hawaaian
