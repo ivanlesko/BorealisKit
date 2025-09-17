@@ -20,7 +20,6 @@ public struct PrimaryButton: View {
         self.theme = theme.theme
     }
     
-    // The UI
     public var body: some View {
         Button(action: action) {
             Text(title)
@@ -28,7 +27,7 @@ public struct PrimaryButton: View {
                 .foregroundColor(.white)
                 .padding(theme.buttonPadding)
                 .background(theme.primaryColor)
-                .cornerRadius(10)
+                .cornerRadius(theme.buttonCornerRadius)
         }
     }
 }
