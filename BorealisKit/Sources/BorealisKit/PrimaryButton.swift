@@ -37,7 +37,7 @@ public struct PrimaryButton: View {
 struct PrimaryButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            PrimaryButton(title: "Click Me", theme: BorealisTheme.Alaska) {
+            PrimaryButton(title: "Click Me", theme: BorealisTheme.alaska) {
                 print("Button tapped")
             }
         }

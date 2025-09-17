@@ -11,7 +11,7 @@ import SwiftUI
 struct BorealisUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ComponentLibraryView()
         }
     }
 }
