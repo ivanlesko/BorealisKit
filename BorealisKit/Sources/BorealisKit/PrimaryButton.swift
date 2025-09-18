@@ -109,7 +109,7 @@ public struct PrimaryButton: View {
         case .secondary:
             return AnyView(
                 RoundedRectangle(cornerRadius: theme.buttonCornerRadius)
-                    .stroke(theme.primaryColor, lineWidth: 2)
+                    .stroke(theme.primaryColor, lineWidth: 1)
             )
         case .nav:
             return AnyView(EmptyView())

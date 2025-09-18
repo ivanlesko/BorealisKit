@@ -20,7 +20,9 @@ struct ComponentLibraryView: View {
                         Text("Toggle button")
                     }
                     Section(header: Text("UCM Pattern")) {
-                        Text("Card")
+                        NavigationLink("Card") {
+                            BorealisCardDemoView()
+                        }
                     }
                 }
                 .listStyle(.insetGrouped)

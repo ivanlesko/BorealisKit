@@ -7,20 +7,40 @@
 
 import SwiftUI
 
-import SwiftUI
-
-struct BorealisCard: View {
-    let imageURL: URL?
-    let title: String
-    let subtitle: String?
-    let paragraph: String?
-    let ctaTitle: String?
-    let ctaAction: (() -> Void)?
-    let theme: Theme
-    let buttonType: PrimaryButton.ButtonType
-    let isFullWidthCTA: Bool
+public struct Card: View {
+    public let imageURL: URL?
+    public let title: String
+    public let subtitle: String?
+    public let paragraph: String?
+    public let ctaTitle: String?
+    public let ctaAction: (() -> Void)?
+    public let theme: Theme
+    public let buttonType: PrimaryButton.ButtonType
+    public let isFullWidthCTA: Bool
     
-    var body: some View {
+    public init(
+        imageURL: URL? = nil,
+        title: String,
+        subtitle: String? = nil,
+        paragraph: String? = nil,
+        ctaTitle: String? = nil,
+        ctaAction: (() -> Void)? = nil,
+        theme: Theme,
+        buttonType: PrimaryButton.ButtonType = .primary,
+        isFullWidthCTA: Bool = true
+    ) {
+        self.imageURL = imageURL
+        self.title = title
+        self.subtitle = subtitle
+        self.paragraph = paragraph
+        self.ctaTitle = ctaTitle
+        self.ctaAction = ctaAction
+        self.theme = theme
+        self.buttonType = buttonType
+        self.isFullWidthCTA = isFullWidthCTA
+    }
+    
+    public var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             // Image
             if let imageURL = imageURL {
@@ -73,10 +93,8 @@ struct BorealisCard: View {
                 }
             }
             .padding()
-            .frame(maxWidth: .infinity, alignment: .leading) // ✅ full width
+            .frame(maxWidth: .infinity, alignment: .leading)
             .background(Color(UIColor.systemBackground))
-            .cornerRadius(12, corners: [.bottomLeft, .bottomRight])
-            .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
         }
         .background(Color(UIColor.systemBackground))
         .cornerRadius(12)
@@ -106,9 +124,9 @@ struct RoundedCorner: Shape {
 }
 
 // MARK: - Preview
-struct BorealisCard_Previews: PreviewProvider {
+struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        BorealisCard(
+        Card(
             imageURL: URL(string: "https://images.contentstack.io/v3/assets/blt2cefe12c88e9dd91/blte809e81b0efe6db8/66d0ad9723cce70a04d5f656/honolulu.webp?width=800&format=webp&crop=4:3&quality=50"),
             title: "Honolulu Getaway",
             subtitle: "Sunny beaches and perfect waves",
