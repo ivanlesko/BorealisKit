@@ -85,7 +85,7 @@ public struct PrimaryButton: View {
         case .primary:
             return AnyView(theme.primaryColor)
         case .secondary:
-            return AnyView(Color.clear)
+            return AnyView(Color.white)
         case .nav:
             return AnyView(EmptyView())
         }

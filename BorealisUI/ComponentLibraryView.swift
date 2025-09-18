@@ -17,7 +17,6 @@ struct ComponentLibraryView: View {
                         NavigationLink("Primary Button") {
                             PrimaryButtonDemoView()
                         }
-                        Text("Toggle button")
                     }
                     Section(header: Text("UCM Pattern")) {
                         NavigationLink("Card") {
@@ -25,7 +24,7 @@ struct ComponentLibraryView: View {
                         }
                         
                         NavigationLink("Feature banner") {
-                            BorealisCardDemoView()
+                            FeatureBannerDemo()
                         }
                     }
                 }
@@ -33,7 +32,7 @@ struct ComponentLibraryView: View {
                 .navigationTitle("BorealisKit")
             }
         }
-        .edgesIgnoringSafeArea(.bottom) // ensures the toolbar reaches the bottom of the screen
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
