@@ -23,6 +23,10 @@ struct ComponentLibraryView: View {
                         NavigationLink("Card") {
                             BorealisCardDemoView()
                         }
+                        
+                        NavigationLink("Feature banner") {
+                            BorealisCardDemoView()
+                        }
                     }
                 }
                 .listStyle(.insetGrouped)

@@ -32,7 +32,7 @@ public struct Theme {
 public enum BorealisTheme: CaseIterable, Identifiable {
     case alaska
     case alaskaClassic
-    case hawaaian
+    case hawaaiian
     
     // Identifiable conformance
     public var id: String { rawValue }
@@ -41,7 +41,7 @@ public enum BorealisTheme: CaseIterable, Identifiable {
         switch self {
         case .alaska: return "Alaska"
         case .alaskaClassic: return "AlaskaClassic"
-        case .hawaaian: return "Hawaaian"
+        case .hawaaiian: return "Hawaaiian"
         }
     }
     
@@ -49,7 +49,7 @@ public enum BorealisTheme: CaseIterable, Identifiable {
         switch self {
         case .alaska: return "Alaska"
         case .alaskaClassic: return "Alaska Classic"
-        case .hawaaian: return "Hawaaian"
+        case .hawaaiian: return "Hawaaiian"
         }
     }
     
@@ -68,7 +68,7 @@ public enum BorealisTheme: CaseIterable, Identifiable {
                   accentColor: .black,
                   buttonCornerRadius: 8,
                   buttonPadding: 12)
-        case .hawaaian:
+        case .hawaaiian:
             Theme(primaryColor: Color(hex: "#463C8F"),
                   secondaryColor: Color(hex: "#29315c"),
                   accentColor: .black,
