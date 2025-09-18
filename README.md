@@ -1,6 +1,6 @@
 # BorealisKit
 
-**BorealisKit** is a small SwiftUI component library providing reusable UI elements like buttons and cards with theming support, designed to help you quickly build consistent interfaces in your iOS apps.  
+**BorealisKit** is a small SwiftUI component library providing reusable UI elements like buttons and cards with theming support, designed to let you quickly build consistent multi-branded interfaces. 
 
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-5.5-orange)
 
