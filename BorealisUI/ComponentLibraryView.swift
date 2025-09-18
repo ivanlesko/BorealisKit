@@ -14,7 +14,9 @@ struct ComponentLibraryView: View {
             NavigationView {
                 List {
                     Section(header: Text("Data Display")) {
-                        Text("Primary button")
+                        NavigationLink("Primary Button") {
+                            PrimaryButtonDemoView()
+                        }
                         Text("Toggle button")
                     }
                     Section(header: Text("UCM Pattern")) {
@@ -24,15 +26,6 @@ struct ComponentLibraryView: View {
                 .listStyle(.insetGrouped)
                 .navigationTitle("BorealisKit")
             }
-            
-            // Fixed bottom toolbar
-            HStack {
-                Spacer()
-                ThemeDropdownView()
-                Spacer()
-            }
-            .frame(height: 75)
-            .background(Color(uiColor: .systemGroupedBackground))
         }
         .edgesIgnoringSafeArea(.bottom) // ensures the toolbar reaches the bottom of the screen
     }

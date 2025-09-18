@@ -9,19 +9,19 @@ import SwiftUI
 import BorealisKit
 
 struct ThemeDropdownView: View {
-    @State private var selectedTheme: BorealisTheme = .alaska
+    @Binding var selectedTheme: BorealisTheme
     
     var body: some View {
-        VStack() {
+        VStack {
             Menu {
                 ForEach(BorealisTheme.allCases) { theme in
                     Button(action: { selectedTheme = theme }) {
-                        Text(theme.rawValue.capitalized)
+                        Text(theme.displayString)
                     }
                 }
             } label: {
                 HStack {
-                    Text("Selected Theme: \(selectedTheme.rawValue.capitalized)")
+                    Text(selectedTheme.displayString)
                     Image(systemName: "chevron.down")
                 }
                 .padding()
@@ -37,7 +37,17 @@ struct ThemeDropdownView: View {
 
 // Preview
 struct ThemeDropdownView_Previews: PreviewProvider {
+    struct PreviewWrapper: View {
+        @State private var theme: BorealisTheme = .alaska
+        
+        var body: some View {
+            ThemeDropdownView(selectedTheme: $theme)
+        }
+    }
+    
     static var previews: some View {
-        ThemeDropdownView()
+        PreviewWrapper()
+            .padding()
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -45,6 +45,14 @@ public enum BorealisTheme: CaseIterable, Identifiable {
         }
     }
     
+    public var displayString: String {
+        switch self {
+        case .alaska: return "Alaska"
+        case .alaskaClassic: return "Alaska Classic"
+        case .hawaaian: return "Hawaaian"
+        }
+    }
+    
     // Theme associated with each case
     public var theme: Theme {
         switch self {
