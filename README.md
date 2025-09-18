@@ -17,7 +17,14 @@
   - Optional image  
   - Title, subtitle, and paragraph  
   - CTA button using `PrimaryButton`  
-  - Theming support  
+  - Theming support 
+
+- **FeatureBanner** – a full-width banner component for highlighting content:
+  - Headline and description text  
+  - Optional left image with configurable shape (`circle` or `square`)  
+  - Optional background image with overlay  
+  - CTA button using `PrimaryButton`  
+  - Fully reactive to SwiftUI state   
 
 - Fully reactive and configurable via SwiftUI state  
 
@@ -76,6 +83,30 @@ struct CardDemoView: View {
             theme: BorealisTheme.alaska.theme,
             buttonType: .primary,
             isFullWidthCTA: true
+        )
+        .padding()
+    }
+}
+```
+
+### FeatureBanner
+```swift
+import SwiftUI
+import BorealisKit
+
+struct BannerDemoView: View {
+    var body: some View {
+        FeatureBanner(
+            headline: "Island Adventure Awaits",
+            description: "Golden beaches, lush rainforests, and vibrant marine life await you on your next Hawaiian getaway.",
+            theme: BorealisTheme.hawaaiian.theme,
+            backgroundImageURL: "https://images.contentstack.io/.../hawaii_background.jpg",
+            backgroundOverlay: Color.white.opacity(0.5),
+            imageShape: .circle,
+            imageURL: "https://images.contentstack.io/.../hawaii_hero.jpg",
+            ctaType: .primary,
+            ctaTitle: "Plan Your Trip",
+            ctaAction: { print("CTA tapped") }
         )
         .padding()
     }
