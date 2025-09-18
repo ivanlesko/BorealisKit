@@ -30,7 +30,7 @@
 Add this package to your Xcode project:  
 
 ```
-https://github.com/yourusername/BorealisKit.git
+https://github.com/ivanlesko/BorealisKit
 ```
 
 ## Usage
