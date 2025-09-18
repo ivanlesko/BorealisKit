@@ -126,7 +126,6 @@ public struct FeatureBanner: View {
                         .padding(.top, 8)
                     }
                 }
-                Spacer(minLength: 0)
             }
             .padding()
         }
