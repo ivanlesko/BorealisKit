@@ -29,7 +29,7 @@
 
 Add this package to your Xcode project:  
 
-```swift
+```
 https://github.com/yourusername/BorealisKit.git
 ```
 
