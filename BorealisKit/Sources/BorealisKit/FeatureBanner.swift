@@ -130,7 +130,6 @@ public struct FeatureBanner: View {
             }
             .padding()
         }
-        .frame(maxWidth: .infinity)
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.15), radius: 6, x: 0, y: 4)
     }
